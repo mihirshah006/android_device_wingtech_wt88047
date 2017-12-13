@@ -24,3 +24,10 @@ include $(LOCAL_PATH)/product/*.mk
 
 # Inherit the rest from msm8916-common
 $(call inherit-product, device/cyanogen/msm8916-common/msm8916.mk)
+
+#OTA stuff
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.ota.romname=PolyOS_MotoG5 \
+persist.ota.version=20171214 \
+persist.ota.manifest=https://raw.githubusercontent.com/Poly-OS/android_extras_ota/master/wt88047.xml 
+\
